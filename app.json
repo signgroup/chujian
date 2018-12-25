@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/catalogue/index",
+    "pages/index/map/map",
+    "pages/mine/index",
+    "pages/index/recipes/recList",
+    "pages/index/recipes/index",
+    "pages/index/recipes/menuDetails"
+  ],
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#1296db",
+    "borderStyle": "#ff99ff",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home_nor.png",
+        "selectedIconPath": "images/home_click.png"
+      },
+      {
+        "pagePath": "pages/catalogue/index",
+        "text": "清单",
+        "iconPath": "images/schedule_nor.png",
+        "selectedIconPath": "images/schedule_click.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "images/mine_nor.png",
+        "selectedIconPath": "images/mine_click.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "初见",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "backgroundColor": "#f8f8f8"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

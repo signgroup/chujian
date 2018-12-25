@@ -1,0 +1,83 @@
+.classify {
+  /* margin-top: 100rpx; */
+}
+
+.left-navbar {
+  position: absolute;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background-color: #eee;
+  font-size: 14px;
+}
+
+.left-navbar view {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.active {
+  background-color: #fff;
+  color: red;
+  font-size: 14px;
+}
+
+#right {
+  position: absolute;
+  right: 0;
+  width: 75%;
+  height: 100%;
+  background: #fff;
+}
+
+.img-banner {
+  height: 150rpx;
+  width: 100%;
+}
+
+.goods-list {
+  margin-top: 30rpx;
+}
+
+.goods-title {
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 10rpx;
+}
+
+.goods {
+  width: 150rpx;
+  font-size: 14px;
+  margin: 15rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: left;
+
+}
+
+.img {
+  width: 140rpx;
+  height: 140rpx;
+}
+.goods .iconTextStyle{
+  width:118rpx;
+  height:118rpx;
+  background: repeating-linear-gradient(red, yellow 20%, green 100%);
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+  border-radius:50%;
+  font-size:40rpx;
+  color:#fff;
+  padding:18rpx;
+}
+.goods_active .iconTextStyle{
+  background: repeating-linear-gradient(green, yellow 20%, red 100%);
+  border-radius:50%;
+}

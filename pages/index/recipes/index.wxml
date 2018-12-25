@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page__bd">
+    <view class="classify">
+
+      <!--分类导航栏-->
+      <scroll-view class='left-navbar' scroll-y="true">
+        <view wx:for="{{navLeftItems}}" class="nav_left_items {{curNav == index? 'active' : ''}}" wx:key="key" bindtap="left" data-index="{{index}}">{{item}}
+        </view>
+      </scroll-view>
+      <scroll-view id="right" scroll-y="true" scroll-top="{{scrollTop}}">
+        <!--顶部图片-->
+        <!-- <view class="goods-banner">
+          <image class="img-banner" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532341900&di=0f2fc8e00aba62424e315686b95cbc71&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F016d865795e7010000018c1bda195b.jpg" mode="scaleToFill"></image>
+        </view> -->
+        <!--商品展示-->
+        <view class="goods-list ">
+            <navigator wx:for='{{navRightItems[curIndex].childs}}' class="goods" wx:key="unique" bindtap="ToSearchResult"  wx:for-index="index" wx:for-item="item" hover-class="goods_active"  url="recList?id={{item.categoryInfo.ctgId}}" >
+              <text wx:if='{{item.categoryInfo.name}}' class='iconTextStyle' >{{item.categoryInfo.name}}</text>
+            </navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

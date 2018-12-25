@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page__bd">
+    <view class="weui-form-preview"  wx:for="{{items}}" wx:for-index="index" wx:for-item="item">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">省份</view>
+          <view class="weui-form-preview__value_in-hd">{{item.province}}</view>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">0号柴油</view>
+          <view class="weui-form-preview__value">{{item.dieselOil0}}</view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">89号汽油</view>
+          <view class="weui-form-preview__value">{{item.gasoline90}}</view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">92号汽油</view>
+          <view class="weui-form-preview__value">{{item.gasoline93}}</view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">95号汽油</view>
+          <view class="weui-form-preview__value">{{item.gasoline97}}</view>
+        </view>
+      </view>
+    
+    </view>
+  </view>
+</view>

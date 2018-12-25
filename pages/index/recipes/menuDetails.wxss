@@ -1,0 +1,46 @@
+/* pages/index/recipes/menuDetails.wxss */
+
+.menudetail-content {
+  margin: 20rpx;
+}
+
+.food-title {
+  font-size: 44rpx;
+  color: #111;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menudetail-image image {
+  width: 710rpx;
+  height: 507.5rpx;
+}
+
+.recipeMethod-center {
+  text-align: center;
+}
+
+.recipeMethod image {
+  margin: 20rpx;
+}
+
+.recipeMethod-title {
+  font-size:32rpx;
+  background: #ffb515;
+  color: #fff;
+  padding: 2rpx;
+}
+
+.recipeMethod-text {
+  text-align: left;
+}
+
+.tagLable {
+  margin-top: 40rpx;
+}
+
+.tagLable text {
+  padding: 5rpx 10rpx;
+  margin-right: 5prx;
+  color: #ffb515;
+}

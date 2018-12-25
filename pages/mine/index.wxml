@@ -1,0 +1,105 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- <view class="usermotto">
+    <view class="user-motto">openid:{{openid}}</view>
+    <view class="user-motto">session_key:{{session_key}}</view>
+  </view> -->
+  <view class="weui-cells__title">设备信息</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">网络状态</view>
+      <view class="weui-cell__ft">{{networkType=='none'?'未联网':networkType}}</view>
+    </view>
+  </view>
+
+  <view class="weui-cells__title">系统信息</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">手机品牌</view>
+      <view class="weui-cell__ft">{{systemInfo.brand}}</view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">手机型号</view>
+      <view class="weui-cell__ft">{{systemInfo.model}}</view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">设备像素比</view>
+      <view class="weui-cell__ft">{{systemInfo.pixelRatio}}</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">屏幕宽度</view>
+      <view class="weui-cell__ft">{{systemInfo.screenWidth}}</view>
+    </view>
+
+    
+    <view class="weui-cell">
+      <view class="weui-cell__bd">屏幕高度</view>
+      <view class="weui-cell__ft">{{systemInfo.screenHeight}}</view>
+    </view>
+
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">可使用窗口宽度</view>
+      <view class="weui-cell__ft">{{systemInfo.windowWidth}}</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">可使用窗口高度</view>
+      <view class="weui-cell__ft">{{systemInfo.windowHeight}}</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">微信设置的语言</view>
+      <view class="weui-cell__ft">{{systemInfo.statusBarHeight}}</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">微信版本号</view>
+      <view class="weui-cell__ft">{{systemInfo.language}}</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">操作系统版本</view>
+      <view class="weui-cell__ft">{{systemInfo.version}}</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">客户端平台</view>
+      <view class="weui-cell__ft">{{systemInfo.platform}}</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">字体大小</view>
+      <view class="weui-cell__ft">{{systemInfo.fontSizeSetting}}</view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__bd">客户端基础库版本</view>
+      <view class="weui-cell__ft">{{systemInfo.SDKVersion}}</view>
+    </view>
+
+  </view>
+  
+
+  <view class="weui-cells__title">功能板块</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd" bindtap='scanCode'>识别二维码</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell" bindtap='vibrateLong'>
+      <view class="weui-cell__bd">震动</view>
+      <view class="weui-cell__ft"></view>
+    </view>
+     
+  </view>
+
+</view>

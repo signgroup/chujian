@@ -1,0 +1,30 @@
+<view class='menudetail-content'>
+
+  <view class='food-title'>{{foodDetailData.name}}</view>
+  <view class='menudetail-image'>
+    <image src='{{foodDetailData.recipe.img?foodDetailData.recipe.img:foodDetailData.thumbnail}}'></image>
+  </view>
+
+
+  <view>
+    <view class='recipeMethod-title'>成分</view>
+    <view>{{recipeIngredients}}</view>
+  </view>
+
+  <view class='recipeMethod'>
+    <view class='recipeMethod-title'>做法</view>
+    <block wx:for="{{recipeMethod}}" wx:for-index="index" wx:for-item="item">
+      <view class='recipeMethod-center'>
+        <image wx:if="{{item.img}}" src='{{item.img}}'></image>
+        <view class='recipeMethod-text'>{{item.step}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class='tagLable' wx:if="{{tagArr}}">
+    <view>关键词</view>
+    <block wx:for="{{tagArr}}" wx:for-index="index" wx:for-item="item">
+      <text>{{item}}</text>
+    </block>
+  </view>
+</view>
